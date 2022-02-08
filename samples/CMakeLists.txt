@@ -28,3 +28,6 @@ add_executable(mlp_learning_an_image mlp_learning_an_image.cu tinyexr_wrapper.cp
 target_link_libraries(mlp_learning_an_image PUBLIC ${CUDA_LIBRARIES} tiny-cuda-nn)
 target_compile_options(mlp_learning_an_image PRIVATE $<$<COMPILE_LANGUAGE:CUDA>:${CUDA_NVCC_FLAGS}>)
 
+add_executable(mlp_learning_a_pcd mlp_learning_a_pcd.cu)
+target_link_libraries(mlp_learning_a_pcd PUBLIC ${CUDA_LIBRARIES} tiny-cuda-nn /home/ldeluigi/dev/tiny-cuda-nn/dependencies/cnpy/build/libcnpy.so)
+target_compile_options(mlp_learning_a_pcd PRIVATE $<$<COMPILE_LANGUAGE:CUDA>:${CUDA_NVCC_FLAGS}>)

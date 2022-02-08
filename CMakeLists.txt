@@ -130,7 +130,6 @@ endif()
 list(APPEND CUDA_NVCC_FLAGS "--extended-lambda")
 list(APPEND CUDA_NVCC_FLAGS "--expt-relaxed-constexpr")
 
-
 ###############################################################################
 # Include files
 ###############################################################################
